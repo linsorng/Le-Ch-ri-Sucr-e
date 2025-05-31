@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Form - Le Chéri Sucrée</title>
+  <style>
+ body {
+      font-family: 'Georgia', serif;
+      background-color: #fff8f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .order-form {
+      background: linear-gradient(135deg, #fdeff2, #fbd6d2);
+      padding: 30px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .order-form h1 {
+      text-align: center;
+      color: #a0525f;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #4e2a2a;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #e0caca;
+      border-radius: 8px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #a0525f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6f3c44;
+    }
+  </style>
+</head>
+<body>
+  <form class="order-form">
+    <h1>Order Your Sweet Delight</h1>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="e.g. Jane Doe" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="e.g. jane@example.com" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" placeholder="e.g. +855 12 345 678" required>
+
+    <label for="address">Delivery Address / Pickup Location</label>
+    <textarea id="address" rows="3" placeholder="Street, City, etc." required></textarea>
+
+    <label for="contact-method">Preferred Contact Method</label>
+    <select id="contact-method" required>
+      <option value="">-- Select --</option>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+    </select>
+
+    <label for="order-type">Type of Order</label>
+    <select id="order-type" required>
+      <option value="">-- Choose one --</option>
+      <option value="cake">Cake</option>
+      <option value="cupcake">Cupcakes</option>
+      <option value="pastry">Pastries</option>
+      <option value="custom">Custom Dessert</option>
+    </select>
+
+    <label for="product">Product Selection</label>
+    <input type="text" id="product" placeholder="e.g. Chocolate Cake, Fruit Tart" required>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <label for="size">Size (for cakes)</label>
+    <select id="size">
+      <option value="">-- Select Size --</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+
+    <label for="flavor">Flavor</label>
+    <input type="text" id="flavor" placeholder="e.g. Vanilla, Red Velvet">
+
+    <label for="frosting">Frosting / Decoration</label>
+    <input type="text" id="frosting" placeholder="e.g. Buttercream with floral design">
+
+    <label for="message">Custom Message on Cake</label>
+    <input type="text" id="message" placeholder="e.g. Happy Birthday!">
+
+    <label for="date">Preferred Delivery/Pickup Date</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Preferred Time</label>
+    <input type="time" id="time" required>
+
+    <label for="notes">Allergies or Special Requests</label>
+    <textarea id="notes" rows="3" placeholder="e.g. Nut allergy, gluten-free, etc."></textarea>
+	<div class="checkbox-group">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I agree to the terms and conditions.</label>
+    </div>
+
+    <div class="buttons">
+      <button type="submit">Submit Order</button>
+      <button type="reset">Clear</button>
+    </div>
+  </form>
+</body>
+</html>
